@@ -63,10 +63,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
-    
-    @IBOutlet var btnPressed: UIImage!
 
-   
+    @IBOutlet var btnBouttonpress: [UIButton]!
+    
     @IBAction func btnImagePicker(_ sender: Any) {
       let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
