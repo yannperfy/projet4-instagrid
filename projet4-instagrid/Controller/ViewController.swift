@@ -8,7 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     var isSelected:Bool = false
     @IBOutlet weak var instagridChange1: UIButton!
@@ -62,10 +65,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @IBOutlet var btnPressed: UIImage!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+
    
     @IBAction func btnImagePicker(_ sender: Any) {
       let imagePickerController = UIImagePickerController()

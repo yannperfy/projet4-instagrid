@@ -16,11 +16,11 @@
 		26C756B127C68E03004F1ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C756B027C68E03004F1ED7 /* AppDelegate.swift */; };
 		26C756B327C68E03004F1ED7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C756B227C68E03004F1ED7 /* SceneDelegate.swift */; };
 		26C756B527C68E03004F1ED7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C756B427C68E03004F1ED7 /* ViewController.swift */; };
-		26C756B827C68E03004F1ED7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C756B627C68E03004F1ED7 /* Main.storyboard */; };
 		26C756BA27C68E06004F1ED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C756B927C68E06004F1ED7 /* Assets.xcassets */; };
 		26C756BD27C68E06004F1ED7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C756BB27C68E06004F1ED7 /* LaunchScreen.storyboard */; };
 		26C756C527C74DF4004F1ED7 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 26C756C427C74DF3004F1ED7 /* ThirstySoftRegular.otf */; };
 		26C756C727C74E00004F1ED7 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 26C756C627C74E00004F1ED7 /* Delm-Medium.otf */; };
+		26E4EFB328072F8D0004DCA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C756B627C68E03004F1ED7 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,8 +85,8 @@
 				26C756BB27C68E06004F1ED7 /* LaunchScreen.storyboard */,
 				26C756BE27C68E06004F1ED7 /* Info.plist */,
 				26C756C427C74DF3004F1ED7 /* ThirstySoftRegular.otf */,
-				2640541627FD3BFC00C9AE61 /* borderButton2.swift */,
 				26C756C627C74E00004F1ED7 /* Delm-Medium.otf */,
+				2640541627FD3BFC00C9AE61 /* borderButton2.swift */,
 				2640541427FD37EB00C9AE61 /* borderBoutton.swift */,
 				2640541827FD3D5300C9AE61 /* borderButton3.swift */,
 				2640541A27FD3EB600C9AE61 /* borderView.swift */,
@@ -191,10 +191,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				26C756BD27C68E06004F1ED7 /* LaunchScreen.storyboard in Resources */,
+				26E4EFB328072F8D0004DCA5 /* Main.storyboard in Resources */,
 				26C756C727C74E00004F1ED7 /* Delm-Medium.otf in Resources */,
 				26C756BA27C68E06004F1ED7 /* Assets.xcassets in Resources */,
 				26C756C527C74DF4004F1ED7 /* ThirstySoftRegular.otf in Resources */,
-				26C756B827C68E03004F1ED7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
