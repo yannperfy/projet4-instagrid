@@ -23,16 +23,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="^" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywW-cW-FDX">
-                                <rect key="frame" x="201" y="162.66666666666666" width="26" height="50.333333333333343"/>
+                                <rect key="frame" x="201" y="167.66666666666666" width="26" height="50.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9uu-H3-Uxw">
-                                <rect key="frame" x="104.66666666666667" y="218" width="218.66666666666663" height="49.666666666666686"/>
+                                <rect key="frame" x="104.66666666666667" y="218" width="218.66666666666663" height="85"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLi-Mn-9ry">
-                                        <rect key="frame" x="0.0" y="0.0" width="218.66666666666666" height="49.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="218.66666666666666" height="85"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="swipe up to share">
                                             <fontDescription key="titleFontDescription" name="Delm-Medium" family="Delm" pointSize="32"/>
@@ -40,11 +40,16 @@
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="SPk-Rf-2Bd"/>
+                                    <constraint firstAttribute="width" constant="218.66999999999999" id="bLf-H7-UHy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="218.66999999999999" id="fri-ZL-yWZ"/>
+                                </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="52d-or-y4S">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="52d-or-y4S" customClass="borderStackView" customModule="projet4_instagrid" customModuleProvider="target">
                                 <rect key="frame" x="64" y="313" width="300" height="300"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HpD-Im-5ks">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HpD-Im-5ks" customClass="borderView" customModule="projet4_instagrid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="BfJ-1y-IS7">
@@ -103,30 +108,79 @@
                                             <constraint firstAttribute="width" constant="300" id="6M0-Q6-gsH"/>
                                             <constraint firstItem="BfJ-1y-IS7" firstAttribute="centerY" secondItem="HpD-Im-5ks" secondAttribute="centerY" id="lu3-LP-PBM"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRAdius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRAdius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="oXL-Gl-nQH">
                                 <rect key="frame" x="64" y="780" width="300" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XV5-Il-DuT">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XV5-Il-DuT" customClass="borderBoutton" customModule="projet4_instagrid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="">
-                                            <backgroundConfiguration key="background" image="Layout 1"/>
+                                            <backgroundConfiguration key="background" cornerRadius="0.0" image="Layout 1"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRAdius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="instagridAction1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wXf-r3-M5Y"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A20-Ha-f5G">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A20-Ha-f5G" customClass="borderButton2" customModule="projet4_instagrid">
                                         <rect key="frame" x="110" y="0.0" width="80" height="80"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="">
-                                            <backgroundConfiguration key="background" image="Layout 2"/>
+                                            <backgroundConfiguration key="background" cornerRadius="0.0" image="Layout 2"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRAdius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="instagridAction2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Unl-KJ-IlI"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHA-uC-I4E">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHA-uC-I4E" customClass="borderButton3" customModule="projet4_instagrid" customModuleProvider="target">
                                         <rect key="frame" x="220" y="0.0" width="80" height="80"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="Layout 3" title=""/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Layout 3" title="" imagePadding="0.0"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRAdius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="instagridAction3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a6a-Wz-Q41"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -141,24 +195,41 @@
                         <color key="backgroundColor" red="0.71939593550000003" green="0.84241992239999997" blue="0.89804953340000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="hub-6M-u5x" firstAttribute="centerX" secondItem="0Hh-4b-lly" secondAttribute="centerX" id="5Is-vs-n80"/>
+                            <constraint firstItem="52d-or-y4S" firstAttribute="top" secondItem="9uu-H3-Uxw" secondAttribute="bottom" constant="10" id="5Xz-xo-wAY"/>
                             <constraint firstItem="VzM-se-ya2" firstAttribute="bottom" secondItem="oXL-Gl-nQH" secondAttribute="bottom" constant="32" id="FCT-FZ-vw1"/>
+                            <constraint firstItem="9uu-H3-Uxw" firstAttribute="top" secondItem="ywW-cW-FDX" secondAttribute="bottom" id="T8L-uD-yTR"/>
                             <constraint firstItem="oXL-Gl-nQH" firstAttribute="centerX" secondItem="0Hh-4b-lly" secondAttribute="centerX" id="Vb6-xJ-Zyh"/>
                             <constraint firstItem="52d-or-y4S" firstAttribute="centerX" secondItem="0Hh-4b-lly" secondAttribute="centerX" id="YBu-I5-M2u"/>
                             <constraint firstItem="9uu-H3-Uxw" firstAttribute="top" secondItem="VzM-se-ya2" secondAttribute="top" constant="174" id="aQC-4I-vKc"/>
                             <constraint firstItem="ywW-cW-FDX" firstAttribute="centerX" secondItem="0Hh-4b-lly" secondAttribute="centerX" id="bfV-HC-oCa"/>
                             <constraint firstItem="hub-6M-u5x" firstAttribute="top" secondItem="VzM-se-ya2" secondAttribute="top" constant="5" id="keC-q1-pAJ"/>
                             <constraint firstItem="52d-or-y4S" firstAttribute="centerY" secondItem="0Hh-4b-lly" secondAttribute="centerY" id="lkN-C5-c2q"/>
-                            <constraint firstItem="9uu-H3-Uxw" firstAttribute="top" secondItem="ywW-cW-FDX" secondAttribute="bottom" constant="5" id="mNe-zL-0z8"/>
                             <constraint firstItem="ywW-cW-FDX" firstAttribute="centerX" secondItem="0Hh-4b-lly" secondAttribute="centerX" id="w26-Ox-6oA"/>
                             <constraint firstItem="9uu-H3-Uxw" firstAttribute="centerX" secondItem="0Hh-4b-lly" secondAttribute="centerX" id="wol-GC-BaF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="instagridChange1" destination="XV5-Il-DuT" id="3ZW-01-2Il"/>
+                        <outlet property="instagridChange2" destination="A20-Ha-f5G" id="buW-Sm-7sM"/>
+                        <outlet property="instagridChange3" destination="gHA-uC-I4E" id="pgl-zs-Rj5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="417.75700934579436" y="72.570194384449252"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="A20-Ha-f5G">
+            <size key="intrinsicContentSize" width="24" height="14"/>
+        </designable>
+        <designable name="XV5-Il-DuT">
+            <size key="intrinsicContentSize" width="24" height="14"/>
+        </designable>
+        <designable name="gHA-uC-I4E">
+            <size key="intrinsicContentSize" width="104" height="94"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Layout 1" width="80" height="80"/>
         <image name="Layout 2" width="80" height="80"/>
