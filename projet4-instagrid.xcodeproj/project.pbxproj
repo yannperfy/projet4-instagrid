@@ -12,7 +12,7 @@
 		2640541927FD3D5300C9AE61 /* borderButton3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640541827FD3D5300C9AE61 /* borderButton3.swift */; };
 		2640541B27FD3EB600C9AE61 /* borderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640541A27FD3EB600C9AE61 /* borderView.swift */; };
 		2640541D27FD404600C9AE61 /* borderStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2640541C27FD404600C9AE61 /* borderStackView.swift */; };
-		265BB55C27FDB0D000B5D3D4 /* UIimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265BB55B27FDB0D000B5D3D4 /* UIimage.swift */; };
+		266AE5102809915E0033A351 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266AE50F2809915E0033A351 /* extension.swift */; };
 		26C756B127C68E03004F1ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C756B027C68E03004F1ED7 /* AppDelegate.swift */; };
 		26C756B327C68E03004F1ED7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C756B227C68E03004F1ED7 /* SceneDelegate.swift */; };
 		26C756B527C68E03004F1ED7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C756B427C68E03004F1ED7 /* ViewController.swift */; };
@@ -23,13 +23,26 @@
 		26E4EFB328072F8D0004DCA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C756B627C68E03004F1ED7 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		26718CBE28098961006004E8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2640541427FD37EB00C9AE61 /* borderBoutton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = borderBoutton.swift; sourceTree = "<group>"; };
 		2640541627FD3BFC00C9AE61 /* borderButton2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = borderButton2.swift; sourceTree = "<group>"; };
 		2640541827FD3D5300C9AE61 /* borderButton3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = borderButton3.swift; sourceTree = "<group>"; };
 		2640541A27FD3EB600C9AE61 /* borderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = borderView.swift; sourceTree = "<group>"; };
 		2640541C27FD404600C9AE61 /* borderStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = borderStackView.swift; sourceTree = "<group>"; };
-		265BB55B27FDB0D000B5D3D4 /* UIimage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIimage.swift; sourceTree = "<group>"; };
+		266AE50F2809915E0033A351 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		26C756AD27C68E03004F1ED7 /* projet4-instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "projet4-instagrid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26C756B027C68E03004F1ED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26C756B227C68E03004F1ED7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +113,7 @@
 		2640541E27FD4DA600C9AE61 /* extension */ = {
 			isa = PBXGroup;
 			children = (
-				265BB55B27FDB0D000B5D3D4 /* UIimage.swift */,
+				266AE50F2809915E0033A351 /* extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -142,6 +155,7 @@
 				26C756A927C68E03004F1ED7 /* Sources */,
 				26C756AA27C68E03004F1ED7 /* Frameworks */,
 				26C756AB27C68E03004F1ED7 /* Resources */,
+				26718CBE28098961006004E8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -159,7 +173,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					26C756AC27C68E03004F1ED7 = {
@@ -208,7 +222,7 @@
 				2640541727FD3BFC00C9AE61 /* borderButton2.swift in Sources */,
 				26C756B527C68E03004F1ED7 /* ViewController.swift in Sources */,
 				26C756B127C68E03004F1ED7 /* AppDelegate.swift in Sources */,
-				265BB55C27FDB0D000B5D3D4 /* UIimage.swift in Sources */,
+				266AE5102809915E0033A351 /* extension.swift in Sources */,
 				2640541B27FD3EB600C9AE61 /* borderView.swift in Sources */,
 				26C756B327C68E03004F1ED7 /* SceneDelegate.swift in Sources */,
 				2640541527FD37EB00C9AE61 /* borderBoutton.swift in Sources */,

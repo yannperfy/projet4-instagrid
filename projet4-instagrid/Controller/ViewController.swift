@@ -7,19 +7,93 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UINavigationControllerDelegate {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    var isSelected:Bool = false
+    @IBOutlet weak var borderView: UIView!
+    @IBOutlet weak var layoutStackview: UIStackView!
+ 
+    @IBOutlet weak var swipeUPStackView: UIStackView!
+    @IBOutlet var btnBouttonpress: [UIButton]!
+   
     @IBOutlet weak var instagridChange1: UIButton!
     
     @IBOutlet weak var instagridChange2: UIButton!
     
     @IBOutlet weak var instagridChange3: UIButton!
+    var indexButtons = Int()
+      let imagePickerController = UIImagePickerController()
+      
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+              
+    }
+    @objc func displayActivityController(_ sender: UIActivityItemSource) {
+            print("ActivityController opened")
+            let imageView = asImage(borderView)
+            let activityController = UIActivityViewController(activityItems: [imageView as Any], applicationActivities: nil)
+            self.present(activityController, animated: true, completion: nil)
+            self.shareView()
+            
+            //Completion handler
+            activityController.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, arrayReturnedItems: [Any]?, error: Error?) in
+                if completed {
+                    print("share completed")
+                    self.cancelShareView()
+                    return
+                } else {
+                    print("cancel")
+                    self.cancelShareView()
+                }
+            }
+        }
+    func cancelShareView() {
+          let translationTransform = CGAffineTransform(translationX: 0, y: 0)
+          UIView.animate(withDuration: 0.3) {
+              self.swipeUPStackView.transform = .identity
+              self.borderView.transform = translationTransform
+          }
+      }
+    
+    func asImage(_ view: UIView) -> UIImage? {
+          UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.isOpaque, 0.0)
+                 defer { UIGraphicsEndImageContext() }
+                 if let context = UIGraphicsGetCurrentContext() {
+                     view.layer.render(in: context)
+                     let image = UIGraphicsGetImageFromCurrentImageContext()
+                     return image
+                 }
+                 return nil
+}
+    @IBAction func imagesCharge(_ sender: UIButton) {
+        indexButtons = sender.tag
+        showImagePickerController()
         
+    }
+    
+    
+    func shareView () {
+        if UIDevice.current.orientation.isLandscape {
+            let screenWidth = UIScreen.main.bounds.width
+            let translationTransform = CGAffineTransform(translationX: -screenWidth, y: 0)
+            UIView.animate(withDuration: 0.5) {
+                self.borderView.transform = translationTransform
+                self.swipeUPStackView.transform = translationTransform
+            }
+        } else {
+            let screenHeight = UIScreen.main.bounds.height
+            let translationTransform = CGAffineTransform(translationX: 0, y: -screenHeight)
+            UIView.animate(withDuration: 0.5) {
+                self.swipeUPStackView.transform = translationTransform
+                self.borderView.transform = translationTransform
+            }
+        }
+    }
+    
+    
+    var isSelected:Bool = false
+
     @IBAction func instagridAction1(_ sender: Any) {
         if isSelected {
         isSelected = false
@@ -55,76 +129,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
 }
-    
-    @IBAction func swipeUpToShare(_ sender: Any) {
-        let activityVc =    UIActivityViewController(activityItems: ["pictures"], applicationActivities: nil)
-        activityVc.popoverPresentationController?.sourceView = self.view
-        self.present(activityVc, animated: true , completion: nil)
-    }
-    
+
     
 
-    @IBOutlet var btnBouttonpress: [UIButton]!
     
-    @IBAction func btnImagePicker(_ sender: Any) {
-      let imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        
-        let ac = UIAlertController(title: "select Image", message: "select image from?", preferredStyle: .actionSheet)
-        
-        
-        let cameraBtn = UIAlertAction(title: "camera", style: .default) {[weak self](_) in
-            self?.showImagePicker(selectedSource: .camera)
-        }
-        let libraryBtn = UIAlertAction(title: "library", style: .default) {[weak self](_) in
-            self?.showImagePicker(selectedSource: .photoLibrary)
-        }
-        
-        let cancelBtn = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        ac.addAction(cameraBtn)
-                                                                     ac.addAction(libraryBtn)
-                                                                     ac.addAction(cancelBtn)
-                                                                     self.present(ac, animated: true, completion: nil)
-                                                                     }
-    
-   
-    @objc func showImagePicker(selectedSource: UIImagePickerController.SourceType) {
-        guard UIImagePickerController.isSourceTypeAvailable(selectedSource) else {
-            print("selected source not available")
-            return
-        }
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        
-        imagePickerController.sourceType = selectedSource
-        imagePickerController.allowsEditing = true
-   
-        self.present(imagePickerController, animated: true, completion: nil)
-    }
-
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let image = info[.editedImage] as? UIImage else { return }
-
-        let imageName = UUID().uuidString
-        let imagePath = getDocumentsDirectory().appendingPathComponent(imageName)
-
-        if let jpegData = image.jpegData(compressionQuality: 0.8) {
-            try? jpegData.write(to: imagePath)
-            
-           
-        }
-
-        dismiss(animated: true)
-    }
-
-    func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
- 
 }
 

@@ -35,7 +35,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="218.66666666666666" height="85"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="swipe up to share">
-                                            <fontDescription key="titleFontDescription" name="Delm-Medium" family="Delm" pointSize="32"/>
+                                            <fontDescription key="titleFontDescription" name="Delm-Medium" family="Delm" pointSize="24"/>
                                             <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
                                     </button>
@@ -49,7 +49,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="52d-or-y4S" customClass="borderStackView" customModule="projet4_instagrid" customModuleProvider="target">
                                 <rect key="frame" x="64" y="313" width="300" height="300"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HpD-Im-5ks" customClass="borderView" customModule="projet4_instagrid" customModuleProvider="target">
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HpD-Im-5ks" customClass="borderView" customModule="projet4_instagrid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="BfJ-1y-IS7">
@@ -58,7 +58,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="xLg-V0-PaG">
                                                         <rect key="frame" x="0.0" y="0.0" width="127" height="275"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBs-SG-1i7">
+                                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBs-SG-1i7">
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="vBs-SG-1i7" secondAttribute="height" id="BR7-yA-oV9"/>
@@ -67,10 +67,10 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="Main Layout{linearEase;0,38,184,300,300,360,1;100,38,-320,300,300,360,1;}" title=""/>
                                                                 <connections>
-                                                                    <action selector="btnImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D1R-n4-qnN"/>
+                                                                    <action selector="imagesCharge:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VHN-lR-759"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evC-U0-gwT">
+                                                            <button opaque="NO" alpha="0.94999999999999996" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evC-U0-gwT">
                                                                 <rect key="frame" x="0.0" y="148" width="127" height="127"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <state key="normal" title="Button"/>
@@ -78,7 +78,7 @@
                                                                     <backgroundConfiguration key="background"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="btnImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CW1-xa-5Ug"/>
+                                                                    <action selector="imagesCharge:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9yd-qM-cWa"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -86,7 +86,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="DSC-zX-pXM">
                                                         <rect key="frame" x="148" y="0.0" width="127" height="275"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOC-Yc-3mb">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOC-Yc-3mb">
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
@@ -96,16 +96,16 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="Plus-1" title=""/>
                                                                 <connections>
-                                                                    <action selector="btnImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mdR-lt-QWW"/>
+                                                                    <action selector="imagesCharge:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kML-jV-klb"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcW-dU-Tbf">
+                                                            <button tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcW-dU-Tbf">
                                                                 <rect key="frame" x="0.0" y="148" width="127" height="127"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="Plus-1" title=""/>
                                                                 <connections>
-                                                                    <action selector="btnImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6fo-YO-Lv7"/>
+                                                                    <action selector="imagesCharge:" destination="BYZ-38-t0r" eventType="touchUpInside" id="liG-Xy-Efm"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -221,9 +221,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="borderView" destination="HpD-Im-5ks" id="PPY-fA-7VA"/>
                         <outlet property="instagridChange1" destination="XV5-Il-DuT" id="3ZW-01-2Il"/>
                         <outlet property="instagridChange2" destination="A20-Ha-f5G" id="buW-Sm-7sM"/>
                         <outlet property="instagridChange3" destination="gHA-uC-I4E" id="pgl-zs-Rj5"/>
+                        <outlet property="layoutStackview" destination="52d-or-y4S" id="nYB-4N-SHK"/>
+                        <outlet property="swipeUPStackView" destination="9uu-H3-Uxw" id="QOk-Wm-Ufd"/>
                         <outletCollection property="btnBouttonpress" destination="vBs-SG-1i7" collectionClass="NSMutableArray" id="TeA-Z6-X98"/>
                         <outletCollection property="btnBouttonpress" destination="GOC-Yc-3mb" collectionClass="NSMutableArray" id="HIg-PO-1d2"/>
                         <outletCollection property="btnBouttonpress" destination="evC-U0-gwT" collectionClass="NSMutableArray" id="9QV-uJ-v2R"/>
